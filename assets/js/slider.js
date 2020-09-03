@@ -68,36 +68,25 @@ const database = [{
 },
     {
         src:
-            "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
-        desr: "man",
+            "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
+        desr: "demo",
     },
     {
         src:
-            "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
-        desr: "man",
+            "https://image.shutterstock.com/image-photo/mountains-during-sunset-beautiful-natural-260nw-407021107.jpg",
+        desr: "grass",
     },
 ];
 
 
 const slider = new Slider([
-    new Slide(
-        "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
-        "man"
-    ),
-    new Slide(
-        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
-        "demo"
-    ),
-    new Slide(
-        "https://image.shutterstock.com/image-photo/mountains-during-sunset-beautiful-natural-260nw-407021107.jpg",
-        "grass"
-    ),
+    new Slide(database[0].src, database[0].desr),
+    new Slide(database[1].src, database[1].desr),
+    new Slide(database[2].src, database[2].desr),
 ]);
 
 const [img] = document.getElementsByClassName("sliderImage");
-const [prevBtn, nextBtn] = document.querySelectorAll(
-    ".sliderButtons > button"
-);
+const [prevBtn, nextBtn] = document.querySelectorAll(".sliderButtons > button");
 
 const createButtonHandler = (direction = "next") => {
     return (event) => {
