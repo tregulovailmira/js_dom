@@ -44,3 +44,11 @@ body {
 .hideImage {
     opacity: 0;
 }
+
+div a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: var(--border);
+    text-decoration: none;
+    color: black;
+}

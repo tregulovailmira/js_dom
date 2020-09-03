@@ -1,3 +1,7 @@
+:root {
+    --border: 1px solid blue;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -7,13 +11,21 @@ body {
 form, img.mouseover {
     margin: 10px;
     padding: 10px;
-    border: 1px solid blue;
+    border: var(--border);
 }
 
 img.mouseover {
     object-fit: cover;
     height: 400px;
     width: 600px;
+}
+
+div a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: var(--border);
+    text-decoration: none;
+    color: black;
 }
 
 
