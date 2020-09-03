@@ -1,0 +1,46 @@
+:root {
+    --border: 1px solid red;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sliderContainer {
+    position: relative;
+    height: 50vh;
+    width: 50%;
+    border: var(--border);
+}
+
+#sliderContainer > img {
+    position: absolute;
+    object-fit: cover;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 94%;
+    transition: opacity 0.7s;
+}
+
+.sliderButtons {
+    margin: 10px;
+    padding: 10px;
+    border: var(--border);
+}
+
+.oldImage {
+    z-index: 1;
+    opacity: 0;
+}
+
+.newImage {
+    z-index: 2;
+    opacity: 1;
+}
+
+.hideImage {
+    opacity: 0;
+}
